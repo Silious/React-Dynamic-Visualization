@@ -1,4 +1,5 @@
 import React from 'react';
+import _ from 'lodash';
 import './style/index.css';
 
 class Animate extends React.Component {
@@ -14,10 +15,18 @@ class Animate extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({ data: nextProps.data });
+    if (!(_.isEqual(this.state.data, nextProps.data))) {
+      this.setState({ data: nextProps.data });
+    }
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    if (_.isEqual(nextState.data, this.state.data)) {
+      return false;
+    }
+    return true;
   }
   render() {
-    // const { data, color } = this.state
     const { prefixcls } = this.props;
     return (
       <div className={`${prefixcls}`}>{this.renderAnimate()}</div>
@@ -30,28 +39,27 @@ class Animate extends React.Component {
     const { prefixcls } = this.props;
     let animate = [];
     const newList = this.orderData(list);
-    console.log(newList)
     newList.map((item, index) => {
-        animate.push(
-          <div
-            className={`${prefixcls}-item`}
-            key={item.id}
-            style={{ top: index * 30 }}
-          >
-            <div className={`${prefixcls}-item-name`}>{item.name}</div>
-            <div className={`${prefixcls}-item-right`}>
-              <div
-                className={`${prefixcls}-item-color`}
-                style={{ background: this.getColor(item), width: item.count }}
-              >
-                <span>{item.name}</span>
-              </div>
-              <div className={`${prefixcls}-item-count`}>
-                <span>{item.count}</span>
-              </div>
+      animate.push(
+        <div
+          className={`${prefixcls}-item`}
+          key={item.id}
+          style={{ top: index * 30 }}
+        >
+          <div className={`${prefixcls}-item-name`}>{item.name}</div>
+          <div className={`${prefixcls}-item-right`}>
+            <div
+              className={`${prefixcls}-item-color`}
+              style={{ background: this.getColor(item), width: item.count }}
+            >
+              <span>{item.name}</span>
+            </div>
+            <div className={`${prefixcls}-item-count`}>
+              <span>{item.count}</span>
             </div>
           </div>
-        );
+        </div>
+      );
     });
     return animate;
   }

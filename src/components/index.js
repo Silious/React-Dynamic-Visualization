@@ -101,22 +101,22 @@ class Demo extends Component {
           {
             id: '1',  //唯一
             name: '名字1',//某一行数据的名字
-            count: 300,//某一行具体的数据
+            count: 290,//某一行具体的数据
           },
           {
             id: '2',
             name: '名字2',
-            count: 200,
+            count: 320,
           },
           {
             id: '3',
             name: '名字3',
-            count: 100,
+            count: 400,
           },
           {
             id: '4',
             name: '名字4',
-            count: 250,
+            count: 230,
           },
           {
             id: '5',
@@ -125,9 +125,43 @@ class Demo extends Component {
           },
         ]
       },]
-    this.inter = setInterval(() => {
-      this.setState({data:newData});
+    this.inter = setTimeout(() => {
+      this.setState({ data: newData });
     }, 1000);
+    const newDatas = [
+      {
+        title: '第1月',
+        list: [
+          {
+            id: '1',  //唯一
+            name: '名字1',//某一行数据的名字
+            count: 90,//某一行具体的数据
+          },
+          {
+            id: '2',
+            name: '名字2',
+            count: 320,
+          },
+          {
+            id: '3',
+            name: '名字3',
+            count: 500,
+          },
+          {
+            id: '4',
+            name: '名字4',
+            count: 730,
+          },
+          {
+            id: '5',
+            name: '名字5',
+            count: 150,
+          },
+        ]
+      },]
+    this.inter2 = setTimeout(() => {
+      this.setState({ data: newDatas });
+    }, 2000);
   }
   render() {
     return (
@@ -138,6 +172,7 @@ class Demo extends Component {
   }
   componentWillUnmount() {
     clearInterval(this.inter);
+    clearInterval(this.inter2);
   }
 }
 
