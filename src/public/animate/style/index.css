@@ -6,7 +6,7 @@
 .animate-item {
     clear: both;
     position: absolute;
-    transition: top 1s;
+    transition: top 1s ease;
 }
 .animate-item-name {
     float: left;  

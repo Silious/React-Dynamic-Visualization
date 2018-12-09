@@ -161,7 +161,7 @@ class Demo extends Component {
       },]
     this.inter2 = setTimeout(() => {
       this.setState({ data: newDatas });
-    }, 2000);
+    }, 3000);
   }
   render() {
     return (

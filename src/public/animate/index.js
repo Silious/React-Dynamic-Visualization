@@ -14,18 +14,33 @@ class Animate extends React.Component {
     }
   }
 
+  componentWillMount() {
+    const { data } = this.state;
+    data[0].list.sort((a, b) => b.count - a.count);
+    data[0].list.map((item, index) => {
+      item.currentIndex = index;
+    });
+    this.setState({ data });
+  }
+
   componentWillReceiveProps(nextProps) {
     if (!(_.isEqual(this.state.data, nextProps.data))) {
-      this.setState({ data: nextProps.data });
+      let { data } = nextProps;
+      let oldData = this.state.data;
+      let newList = data[0].list;
+      newList.sort((a, b) => b.count - a.count);
+      newList.map((item,index) => {
+        oldData[0].list.map((item1) => {
+          if (item1.id === item.id) {
+            item1.currentIndex = index;
+            item1.count = item.count;
+          }
+        });
+      });
+      this.setState({ data: oldData })
     }
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    if (_.isEqual(nextState.data, this.state.data)) {
-      return false;
-    }
-    return true;
-  }
   render() {
     const { prefixcls } = this.props;
     return (
@@ -38,15 +53,12 @@ class Animate extends React.Component {
     const { list } = data[0];
     const { prefixcls } = this.props;
     let animate = [];
-    const newList = this.orderData(list);
-    console.log(newList)
-    newList.map((item, index) => {
-      console.log(item, index);
+    list.map((item, index) => {
       animate.push(
         <div
           className={`${prefixcls}-item`}
           key={item.id}
-          style={{ top: index * 30 }}
+          style={{ top: item.currentIndex * 30 }}
         >
           <div className={`${prefixcls}-item-name`}>{item.name}</div>
           <div className={`${prefixcls}-item-right`}>
@@ -77,11 +89,6 @@ class Animate extends React.Component {
     return myColor;
   }
 
-  // 排序
-  orderData = (list) => {
-    list.sort((a, b) => b.count - a.count);
-    return list;
-  }
 }
 
 export default Animate;
