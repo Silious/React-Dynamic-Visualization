@@ -121,7 +121,7 @@ class Demo extends Component {
           {
             id: '5',
             name: '名字5',
-            count: 150,
+            count: 250,
           },
         ]
       },]
@@ -140,7 +140,7 @@ class Demo extends Component {
           {
             id: '2',
             name: '名字2',
-            count: 320,
+            count: 160,
           },
           {
             id: '3',
@@ -155,7 +155,7 @@ class Demo extends Component {
           {
             id: '5',
             name: '名字5',
-            count: 150,
+            count: 60,
           },
         ]
       },]

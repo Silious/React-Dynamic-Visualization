@@ -39,7 +39,9 @@ class Animate extends React.Component {
     const { prefixcls } = this.props;
     let animate = [];
     const newList = this.orderData(list);
+    console.log(newList)
     newList.map((item, index) => {
+      console.log(item, index);
       animate.push(
         <div
           className={`${prefixcls}-item`}
@@ -77,16 +79,7 @@ class Animate extends React.Component {
 
   // 排序
   orderData = (list) => {
-    for (let i = 0; i < list.length - 1; i++) {
-      let k;
-      for (let j = i + 1; j < list.length; j++) {
-        if (list[i].count < list[j].count) {
-          k = list[j];
-          list[j] = list[i];
-          list[i] = k;
-        }
-      }
-    }
+    list.sort((a, b) => b.count - a.count);
     return list;
   }
 }
