@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Animate from '../public/animate';
+import Animate from '../../public/animate';
 
 const data = [
   {
@@ -7,8 +7,8 @@ const data = [
     list: [
       {
         id: '1',  //唯一
-        name: '名字1',//某一行数据的名字
-        count: 100,//某一行具体的数据
+        name: '名字1',  //某一行数据的名字
+        count: 100, //某一行具体的数据
       },
       {
         id: '2',
@@ -29,6 +29,126 @@ const data = [
         id: '5',
         name: '名字5',
         count: 500,
+      },
+    ]
+  },
+  {
+    title: '第2月',
+    list: [
+      {
+        id: '1',  //唯一
+        name: '名字1',//某一行数据的名字
+        count: 200,//某一行具体的数据
+      },
+      {
+        id: '2',
+        name: '名字2',
+        count: 500,
+      },
+      {
+        id: '3',
+        name: '名字3',
+        count: 40,
+      },
+      {
+        id: '4',
+        name: '名字4',
+        count: 700,
+      },
+      {
+        id: '5',
+        name: '名字5',
+        count: 300,
+      },
+    ]
+  },
+  {
+    title: '第1月',
+    list: [
+      {
+        id: '1',  //唯一
+        name: '名字1',//某一行数据的名字
+        count: 600,//某一行具体的数据
+      },
+      {
+        id: '2',
+        name: '名字2',
+        count: 100,
+      },
+      {
+        id: '3',
+        name: '名字3',
+        count: 450,
+      },
+      {
+        id: '4',
+        name: '名字4',
+        count: 480,
+      },
+      {
+        id: '5',
+        name: '名字5',
+        count: 40,
+      },
+    ]
+  },
+  {
+    title: '第1月',
+    list: [
+      {
+        id: '1',  //唯一
+        name: '名字1',//某一行数据的名字
+        count: 700,//某一行具体的数据
+      },
+      {
+        id: '2',
+        name: '名字2',
+        count: 300,
+      },
+      {
+        id: '3',
+        name: '名字3',
+        count: 100,
+      },
+      {
+        id: '4',
+        name: '名字4',
+        count: 800,
+      },
+      {
+        id: '5',
+        name: '名字5',
+        count: 200,
+      },
+    ]
+  },
+  {
+    title: '第1月',
+    list: [
+      {
+        id: '1',  //唯一
+        name: '名字1',//某一行数据的名字
+        count: 200,//某一行具体的数据
+      },
+      {
+        id: '2',
+        name: '名字2',
+        count: 400,
+      },
+      {
+        id: '3',
+        name: '名字3',
+        count: 500,
+      },
+      {
+        id: '4',
+        name: '名字4',
+        count: 700,
+      },
+      {
+        id: '5',
+        name: '名字5',
+        count: 100,
       },
     ]
   },

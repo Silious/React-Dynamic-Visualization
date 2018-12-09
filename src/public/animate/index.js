@@ -29,7 +29,7 @@ class Animate extends React.Component {
       let oldData = this.state.data;
       let newList = data[0].list;
       newList.sort((a, b) => b.count - a.count);
-      newList.map((item,index) => {
+      newList.map((item, index) => {
         oldData[0].list.map((item1) => {
           if (item1.id === item.id) {
             item1.currentIndex = index;
