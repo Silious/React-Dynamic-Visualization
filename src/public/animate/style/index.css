@@ -1,0 +1,33 @@
+.animate {
+    position: relative;
+}
+.animate-item {
+    clear: both;
+    position: absolute;
+    transition: top 2s;
+}
+.animate-item-name {
+    float: left;  
+}
+.animate-item-right {
+    float: left;
+}
+.animate-item-color {
+    float: left;
+    position: relative;
+    height: 20px;
+    line-height: 20px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    transition: width 2s;
+}
+.animate-item-color span {
+    font-size: 14px;
+    position: absolute;
+    right: 5px;
+    color: #fff;
+}
+.animate-item-count {
+    float: left;
+    margin-left: 10px;
+}
