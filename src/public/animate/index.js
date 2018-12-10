@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import './style/index.css';
+import './style/index.less';
 
 class Animate extends React.Component {
   static defaultProps = {
