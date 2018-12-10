@@ -9,37 +9,51 @@ class Animate extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: this.props.data,
+      list: this.props.list,
       color: this.props.color,
     }
   }
 
   componentWillMount() {
-    const { data } = this.state;
-    data[0].list.sort((a, b) => b.count - a.count);
-    data[0].list.map((item, index) => {
+    const { list } = this.state;
+    list.sort((a, b) => b.count - a.count);
+    list.map((item, index) => {
       item.currentIndex = index;
     });
-    this.setState({ data });
+    this.setState({ list });
+  }
+
+  componentDidMount() {
+    const { updateData } = this.props;
+    if (typeof updateData === 'function') {
+      updateData();
+    }
   }
 
   componentWillReceiveProps(nextProps) {
-    if (!(_.isEqual(this.state.data, nextProps.data))) {
-      let { data } = nextProps;
-      let oldData = this.state.data;
-      let newList = data[0].list;
-      newList.sort((a, b) => b.count - a.count);
-      newList.map((item, index) => {
-        oldData[0].list.map((item1) => {
+    if (!(_.isEqual(this.state.list, nextProps.list))) {
+      let { list } = nextProps;
+      let oldList = this.state.list;
+      list.sort((a, b) => b.count - a.count);
+      list.map((item, index) => {
+        oldList.map((item1) => {
           if (item1.id === item.id) {
             item1.currentIndex = index;
             item1.count = item.count;
           }
         });
       });
-      this.setState({ data: oldData })
+      this.setState({ list: oldList })
     }
   }
+
+  // componentDidUpdate() {
+  //   const { updateData } = this.props;
+  //   console.log(1)
+  //   if (typeof updateData === 'function') {
+  //     updateData();
+  //   }
+  // }
 
   render() {
     const { prefixcls } = this.props;
@@ -49,8 +63,7 @@ class Animate extends React.Component {
   }
 
   renderAnimate = () => {
-    const { data } = this.state;
-    const { list } = data[0];
+    const { list } = this.state;
     const { prefixcls } = this.props;
     let animate = [];
     list.map((item, index) => {
