@@ -7,27 +7,27 @@ const sourceData = [
     list: [
       {
         id: '1',  //唯一
-        name: '名字1',  //某一行数据的名字
+        name: 'Oppo',  //某一行数据的名字
         count: 100, //某一行具体的数据
       },
       {
         id: '2',
-        name: '名字2',
+        name: 'xiaomi',
         count: 200,
       },
       {
         id: '3',
-        name: '名字3',
+        name: 'Iphone',
         count: 300,
       },
       {
         id: '4',
-        name: '名字4',
+        name: 'Huawei',
         count: 400,
       },
       {
         id: '5',
-        name: '名字5',
+        name: 'Vivo',
         count: 500,
       },
     ]
@@ -37,27 +37,27 @@ const sourceData = [
     list: [
       {
         id: '1',  //唯一
-        name: '名字1',//某一行数据的名字
+        name: 'Oppo',//某一行数据的名字
         count: 200,//某一行具体的数据
       },
       {
         id: '2',
-        name: '名字2',
+        name: 'xiaomi',
         count: 500,
       },
       {
         id: '3',
-        name: '名字3',
-        count: 40,
+        name: 'Iphone',
+        count: 140,
       },
       {
         id: '4',
-        name: '名字4',
+        name: 'Huawei',
         count: 700,
       },
       {
         id: '5',
-        name: '名字5',
+        name: 'Vivo',
         count: 300,
       },
     ]
@@ -67,27 +67,27 @@ const sourceData = [
     list: [
       {
         id: '1',  //唯一
-        name: '名字1',//某一行数据的名字
+        name: 'Oppo',//某一行数据的名字
         count: 600,//某一行具体的数据
       },
       {
         id: '2',
-        name: '名字2',
+        name: 'xiaomi',
         count: 100,
       },
       {
         id: '3',
-        name: '名字3',
+        name: 'Iphone',
         count: 450,
       },
       {
         id: '4',
-        name: '名字4',
+        name: 'Huawei',
         count: 480,
       },
       {
         id: '5',
-        name: '名字5',
+        name: 'Vivo',
         count: 40,
       },
     ]
@@ -97,27 +97,27 @@ const sourceData = [
     list: [
       {
         id: '1',  //唯一
-        name: '名字1',//某一行数据的名字
+        name: 'Oppo',//某一行数据的名字
         count: 700,//某一行具体的数据
       },
       {
         id: '2',
-        name: '名字2',
+        name: 'xiaomi',
         count: 300,
       },
       {
         id: '3',
-        name: '名字3',
+        name: 'Iphone',
         count: 100,
       },
       {
         id: '4',
-        name: '名字4',
+        name: 'Huawei',
         count: 800,
       },
       {
         id: '5',
-        name: '名字5',
+        name: 'Vivo',
         count: 200,
       },
     ]
@@ -127,27 +127,27 @@ const sourceData = [
     list: [
       {
         id: '1',  //唯一
-        name: '名字1',//某一行数据的名字
+        name: 'Oppo',//某一行数据的名字
         count: 200,//某一行具体的数据
       },
       {
         id: '2',
-        name: '名字2',
+        name: 'xiaomi',
         count: 400,
       },
       {
         id: '3',
-        name: '名字3',
+        name: 'Iphone',
         count: 500,
       },
       {
         id: '4',
-        name: '名字4',
+        name: 'Huawei',
         count: 700,
       },
       {
         id: '5',
-        name: '名字5',
+        name: 'Vivo',
         count: 100,
       },
     ]
